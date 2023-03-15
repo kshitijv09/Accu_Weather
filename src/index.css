@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.heading {
+  margin-bottom: 2em;
+  color: rgb(59, 180, 196);
+  display: inline-block;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.heading:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.display {
+  width: 50%;
+  margin: auto;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.input {
+  margin-bottom: 3em;
+}
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.location {
+  width: 100%;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: rgb(131, 39, 125);
+}
+.location h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  color: rgb(131, 39, 125);
+}
+.grid-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.grid-container div {
+  margin: 0 2em;
+}
+.grid-container span {
+  font-weight: 1000;
+  font-size: 1.9rem;
+}
+.display p {
+  font-size: 1.6rem;
+  /* font-weight: 10; */
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 0.09em;
+}
+
+@media (max-width: 868px) {
+  .grid-container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .location h1 {
+    font-size: 5vw;
+  }
+}
